@@ -35,7 +35,7 @@ if st.button("Prédire l'espèce"):
         dna_clean = dna_clean.upper()
 
         if len(dna_clean) < 100:
-            st.error(f"Séquence trop courte ({len(dna_clean)} bp). Minimum 100 bp requis pour une prédiction fiable.")
+            st.error(f"La Séquence fournie est trop courte avec ({len(dna_clean)} bp). Un minimum 100 bp est requis pour une prédiction fiable.")
         else:
             k = 6
             kmers = " ".join([dna_clean[i:i+k] for i in range(len(dna_clean) - k + 1)])
